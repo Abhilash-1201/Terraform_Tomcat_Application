@@ -2,11 +2,11 @@ variable "subnet-id" {}
 variable "sg-groups" {}
 
 resource "aws_instance" "terraform_wapp" {
-    ami = "ami-0ed05376b59b90e46"
+    ami = "ami-005de95e8ff495156"
     instance_type = "t2.micro"
     security_groups = ["${var.sg-groups}"]
     subnet_id = "${var.subnet-id}"
-    key_name               = "california"
+    key_name               = "ELK_ubuntu"
     count         = 1
     associate_public_ip_address = true
     
@@ -44,7 +44,7 @@ resource "aws_instance" "terraform_wapp" {
       type        = "ssh"
       host        = self.public_ip
       user        = "ubuntu"
-      private_key = "${file("~/california.pem")}"
+      private_key = "${file("~/ELK_ubuntu.pem")}"
   }
 
     tags = {
