@@ -1,15 +1,15 @@
 # variables.tf
 variable "access_key" {
-     default = "AKIAXSCMYSMF6QIL2DP2"
+     default = ""
 }
 variable "secret_key" {
-     default = "kkLjqCcc37vmDoOBL96sUMHD6tjhBO6vg3k28Dkk"
+     default = ""
 }
 variable "region" {
-     default = "us-west-1"
+     default = "us-east-1"
 }
 variable "availabilityZone" {
-     default = "us-west-1a"
+     default = "us-east-1a"
 }
 variable "instanceTenancy" {
     default = "default"
